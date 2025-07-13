@@ -11,7 +11,9 @@ const services = [
     { url: 'https://markdevs-last-api.onrender.com/gpt4', param: 'prompt', uid: 'uid' }
 ];
 
-const designatedHeader = "➪ Laureine 🩷🪽";
+const designatedHeader = "➪ Aziz
+
+ 🩷🪽";
 
 const getAIResponse = async (question, messageID) => {
     // Check if response is cached
@@ -57,7 +59,7 @@ const handleCommand = async (api, event, args, message) => {
         const question = args.join(" ").trim();
         if (!question) return message.reply("Qu’est ce qui brille de l’éclat des stars, ta question ou mon désir de t'aider? Pose ta question afin que ces deux interrogations trouvent solution .");
         const { response, messageID } = await getAIResponse(question, event.messageID);
-        api.sendMessage(`➪ Laureine 🩷🪽\n━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
+        api.sendMessage(`➪ Aziz 🩷🪽\n━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
     } catch (error) {
         console.error("Error in handleCommand:", error.message);
         message.reply("An error occurred while processing your request.");
@@ -68,7 +70,9 @@ const onStart = async ({ api, event, args }) => {
     try {
         const input = args.join(' ').trim();
         const { response, messageID } = await getAIResponse(input, event.messageID);
-        api.sendMessage(`➪ Laureine 🩷🪽\n━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
+        api.sendMessage(`➪ Aziz
+
+ 🩷🪽\n━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
     } catch (error) {
         console.error("Error in onStart:", error.message);
         api.sendMessage("An error occurred while processing your request.", event.threadID);
@@ -94,7 +98,9 @@ const onChat = async ({ event, api }) => {
 
         try {
             const { response, messageID } = await getAIResponse(input, event.messageID);
-            api.sendMessage(`➪ Laureine 🩷🪽\n━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
+            api.sendMessage(`➪ Aziz
+
+ 🩷🪽\n━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━`, event.threadID, messageID);
         } catch (error) {
             console.error("Error in onChat:", error.message);
             api.sendMessage("An error occurred while processing your request.", event.threadID);
